@@ -50,7 +50,7 @@ def test_create_user_with_invalid_email():
     }
     response = client.post("/api/v1/user", json=existing_user)
     assert response.status_code == 409
-    assert response.json() == {'message': 'User with this email already exists.'}
+    assert response.json() == {'message': 'User with this email already exists'}
 
 def test_delete_user():
     '''Удаление пользователя'''
