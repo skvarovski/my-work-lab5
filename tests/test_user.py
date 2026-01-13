@@ -40,7 +40,7 @@ def test_create_user_with_valid_email():
     }
     response = client.post("/api/v1/user", json=new_user)
     assert response.status_code == 201
-    assert isinstance(response.json(), int)
+    assert isinstance(response.json(), dict)
 
 def test_create_user_with_invalid_email():
     '''Создание пользователя с почтой, которую использует другой пользователь'''
